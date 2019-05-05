@@ -1,0 +1,1 @@
+mongo  127.0.0.1/disaster-help-dev --eval 'var document = { name : "User", userName : "user1",password:"0a041b9462caa4a31bac3567e0b6e6fd9100787db2ab433d96f6d178cabfce90",phone:"1234567890",contacts:[{name:"abc",phone:"2154687952"},{name:"xyz",phone:"2154789654"}] }; db.users.insert(document);'

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Help!!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src='scripts/main.js'></script>
+
+    <style type="text/css">
+        .login-form {
+            
+            margin: 50px auto;
+        }
+
+        .login-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+
+        .form-control,
+        .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #ed2165;">
+        <a class="navbar-brand" href="/">
+            <h3 class="text-light">Disaster Help</h3>
+        </a>
+        <div class="form-inline my-2 my-lg-0 navbar-right">
+            <input class="form-control mr-sm-2" id="username" placeholder="user1" required>
+            <input class="form-control mr-sm-2" id="password" type="password" required placeholder="user1">
+            <button class="btn btn-info my-2 my-sm-0" onclick="login()" type="submit">Login</button>
+        </div>
+    </nav>
+
+
+    <div class="login-form">
+        <h2 class="text-center">Emergency Help</h2>
+        <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="call-tab" data-toggle="tab" href="#call" role="tab" aria-controls="call"
+                    aria-selected="true">Call</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="message-tab" data-toggle="tab" href="#message" role="tab"
+                    aria-controls="message" aria-selected="false">Message</a>
+            </li>
+        </ul>
+        <div class="tab-content d-flex justify-content-center" id="myTabContent">
+            <form class="tab-pane fade show active" id="call">
+                <div class="form-group">
+                    <label>Caller</label>
+                    <div class="alert alert-danger" hidden id='alert-caller' role="alert">
+
+                    </div>
+                    <input type="text" rows="2" id="txt-caller" class="form-control" placeholder="Your number Here.."
+                        required="required"></input>
+                </div>
+                <div class="form-group">
+                    <label>Receiver</label>
+                    <div class="alert alert-danger" hidden id='alert-receiver' role="alert">
+
+                    </div>
+                    <input type="text" rows="2" id="txt-receiver" class="form-control"
+                        placeholder="Receiver's number Here.." required="required"></input>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button onclick="return call()" class="btn btn-danger"><i class="fa fa-phone"></i> Call</button>
+                </div>
+                <div class="form-group">
+                    <div class="alert" hidden id='alert-response' role="alert">
+                    </div>
+                </div>
+
+            </form>
+
+
+            <form id="message" class="tab-pane fade">
+                <div class="form-group">
+                    <label>Contact</label>
+                    <div class="alert alert-danger" hidden id='alert-contact' role="alert">
+
+                    </div>
+                    <textarea rows="2" id="txt-contact" class="form-control"
+                        placeholder="8796535261 or for multiple contacts 8736524134,6376542314..."
+                        required="required"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <div class="alert alert-danger" hidden id='alert-message' role="alert">
+
+                    </div>
+                    <textarea id="txt-message" rows="3" class="form-control"
+                        placeholder="Message body here"> Help!!!</textarea>
+                </div>
+                <div class="form-group">
+                    <div class="alert" hidden id='alert-message-response' role="alert">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button onclick="return message()" class="btn btn-danger"><i class="fa fa-comment"></i>
+                        Message</button>
+                </div>
+
+
+            </form>
+            <div class="tab-content" id="myTabContent">
+            </div>
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous">
+            </script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
