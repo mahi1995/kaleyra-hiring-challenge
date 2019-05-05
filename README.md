@@ -31,6 +31,5 @@ Develop a responsive web application for Disaster Help. You are supposed to crea
 - server will start start at port 5000
 - open `http://localhost:5000` to view app in browser.
 
-This Project is pushed to https://github.com/mahi1995/kaleyra-hiring-challenge
 
 >App doesn't have user add feature hence a mock user is inserted to DB using DB script.
